@@ -1,5 +1,5 @@
 import { db } from '@/app/db';
-import { redirect } from 'next/navigation';
+import { redirect} from 'next/navigation';
 
 export default function SnippetCreatePage() {
     async function createSnippet(formData: FormData) {
@@ -18,11 +18,10 @@ export default function SnippetCreatePage() {
             },
         });
 
-        console.log(snippet)
-
         //redirect to home
         redirect('/');
     }
+
     return (
         <form action={createSnippet}>
             <h3 className="font-bold m-3"> Create a Snippet</h3>
