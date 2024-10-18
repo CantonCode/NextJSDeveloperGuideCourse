@@ -12,6 +12,6 @@ export default async function Home() {
   } )
 
   return (
-    <div>{renderedSnippets}</div>
+    <div>{renderedSnippets}w</div>
   );
 }
