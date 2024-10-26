@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "installComand": "npm install --legacy-peer-deps",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.6.0",
