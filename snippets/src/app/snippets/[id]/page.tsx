@@ -22,7 +22,7 @@ export default async function SnipperPageShow(props:SnippetShowPageProps){
     }
 
     const deleteSnippetAction = actions.deleteSnippet.bind(null,snippet.id)
-    return <div>
+    return (<div>
         <div className="flex m-4 justify-between items-center">
         <h1 className="text-xl font-bold">{snippet.title}</h1>
         <div className="flex gap-4">
@@ -37,5 +37,15 @@ export default async function SnipperPageShow(props:SnippetShowPageProps){
             <code>{snippet.code}</code>
         </pre>
         
-        </div>
+        </div>);
+}
+
+export async function generateStaticParams(){
+    const snippets = await db.snippet.findMany();
+
+    return snippets.map((snippet)=>{
+        return{
+            id:snippet.id.toString(),
+        };
+    });
 }
