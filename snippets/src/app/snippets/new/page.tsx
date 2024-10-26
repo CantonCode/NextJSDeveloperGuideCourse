@@ -2,9 +2,10 @@
 
 import { useFormState } from 'react-dom';
 import * as actions from '@/app/actions';
+import { useActionState } from 'react';
 
 export default function SnippetCreatePage() {
-  const [formState, action] = useFormState(actions.createSnippet, {
+  const [formState, action] = useActionState(actions.createSnippet, {
     message: '',
   });
 

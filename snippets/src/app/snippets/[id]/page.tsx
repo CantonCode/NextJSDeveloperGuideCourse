@@ -5,9 +5,9 @@ import * as actions from '@/app/actions'
 
 
 interface SnippetShowPageProps{
-    params:{
-        id:string
-    }
+    params: Promise<{
+        id: string;
+      }>;
 }
 
 export default async function SnipperPageShow(props:SnippetShowPageProps){
